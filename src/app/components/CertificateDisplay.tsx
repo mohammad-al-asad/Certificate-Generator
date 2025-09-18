@@ -28,7 +28,6 @@ export default function CertificateDisplay({
             file: data?.picture,
           });
           const body = JSON.stringify({ ...data, picture: res.url });
-          console.log(body);
 
           const response = await fetch("/api/submission", {
             method: "POST",
