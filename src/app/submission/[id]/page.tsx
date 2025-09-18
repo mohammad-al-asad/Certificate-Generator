@@ -16,19 +16,13 @@ function page({ params }: { params: { id: string } }) {
         method: "Get",
       });
       const data = await res.json();
-      
+
       setData(data);
     })();
   }, []);
 
   return (
-
-
-        <CertificateDisplay
-          data={data}
-          onGenerateNew={() => router.replace("/")}
-        />
-
+    <CertificateDisplay data={data} onGenerateNew={() => router.replace("/")} />
   );
 }
 

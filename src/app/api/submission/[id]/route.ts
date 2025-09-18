@@ -9,7 +9,6 @@ export async function GET(
   try {
     dbConnect()
     const submission = await submissionModel.findById(params.id);
-    console.log(submission);
     
     return NextResponse.json(submission);
   } catch (error) {
